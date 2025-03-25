@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj": {}
+    "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj": {}
   },
   "projects": {
-    "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj": {
+    "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj",
+        "projectUniqueName": "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj",
         "projectName": "Plataforma.Backend~",
-        "projectPath": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj",
-        "packagesPath": "/home/fedked/.nuget/packages/",
-        "outputPath": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/obj/",
+        "projectPath": "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj",
+        "packagesPath": "C:\\Users\\joaot\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaot\\workspace\\beta000-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/fedked/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\joaot\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
