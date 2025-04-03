@@ -65,3 +65,8 @@ C:\Users\joaot\workspace\beta000-backend\obj\Debug\net8.0\refint\Plataforma.Back
 C:\Users\joaot\workspace\beta000-backend\obj\Debug\net8.0\Plataforma.Backend~.pdb
 C:\Users\joaot\workspace\beta000-backend\obj\Debug\net8.0\Plataforma.Backend~.genruntimeconfig.cache
 C:\Users\joaot\workspace\beta000-backend\obj\Debug\net8.0\ref\Plataforma.Backend~.dll
+C:\Users\joaot\workspace\beta000-backend\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\joaot\workspace\beta000-backend\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\joaot\workspace\beta000-backend\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\joaot\workspace\beta000-backend\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\joaot\workspace\beta000-backend\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

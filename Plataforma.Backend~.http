@@ -1,6 +1,6 @@
 @Plataforma.Backend__HostAddress = http://localhost:5267
 
-GET {{Plataforma.Backend__HostAddress}}/weatherforecast/
+GET {{Plataforma.Backend__HostAddress}}/example/
 Accept: application/json
 
 ###
