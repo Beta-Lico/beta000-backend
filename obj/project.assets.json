@@ -487,11 +487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj",
+      "projectUniqueName": "/home/fedked/beta000-backend/Plataforma.Backend~.csproj",
       "projectName": "Plataforma.Backend~",
-      "projectPath": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/Plataforma.Backend~.csproj",
+      "projectPath": "/home/fedked/beta000-backend/Plataforma.Backend~.csproj",
       "packagesPath": "/home/fedked/.nuget/packages/",
-      "outputPath": "/home/fedked/workspace/beta-lico/Plataforma.Backend~/obj/",
+      "outputPath": "/home/fedked/beta000-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/fedked/.nuget/NuGet/NuGet.Config"
@@ -551,7 +551,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
