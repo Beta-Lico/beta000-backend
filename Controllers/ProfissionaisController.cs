@@ -10,6 +10,7 @@ public class ProfissionaisController : ControllerBase
 {
     private readonly IMapper _mapper;
     private readonly IValidator<CriarProfissionalDto> _validator;
+    private static readonly List<Profissional> _profissionais = new();
 
     public ProfissionaisController(IMapper mapper, IValidator<CriarProfissionalDto> validator)
     {
@@ -27,6 +28,12 @@ public class ProfissionaisController : ControllerBase
         }
         
         var profissional = _mapper.Map<Profissional>(profissionalDto);
+        _profissionais.Add(profissional);
         return Ok(profissional);
+    }
+
+    [HttpGet]
+    public IActionResult ObterTodos() {
+        return Ok(_profissionais);
     }
 }
