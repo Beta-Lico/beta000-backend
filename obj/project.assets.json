@@ -893,19 +893,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joaot\\.nuget\\packages\\": {}
+    "/home/fedked/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj",
+      "projectUniqueName": "/home/fedked/beta000-backend/Plataforma.Backend~.csproj",
       "projectName": "Plataforma.Backend~",
-      "projectPath": "C:\\Users\\joaot\\workspace\\beta000-backend\\Plataforma.Backend~.csproj",
-      "packagesPath": "C:\\Users\\joaot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joaot\\workspace\\beta000-backend\\obj\\",
+      "projectPath": "/home/fedked/beta000-backend/Plataforma.Backend~.csproj",
+      "packagesPath": "/home/fedked/.nuget/packages/",
+      "outputPath": "/home/fedked/beta000-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\joaot\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/fedked/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -970,7 +970,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
