@@ -19,9 +19,6 @@ obj/
 # VSCode
 .vscode/
 
-# Rider
-.idea/
-
 # Mac/Linux
 .DS_Store
 
