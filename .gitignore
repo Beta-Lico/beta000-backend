@@ -1,0 +1,36 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.pdb
+*.exe
+*.dll
+*.cache
+*.log
+
+# VSCode
+.vscode/
+
+# Rider
+.idea/
+
+# Mac/Linux
+.DS_Store
+
+# NuGet
+*.nupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+*.snupkg
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
