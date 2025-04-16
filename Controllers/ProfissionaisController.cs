@@ -11,6 +11,7 @@ public class ProfissionaisController : ControllerBase
     private readonly IMapper _mapper;
     private readonly IValidator<CriarProfissionalDto> _validator;
     private static readonly List<Profissional> _profissionais = new();
+    private static int _proximoId = 1;
 
     public ProfissionaisController(IMapper mapper, IValidator<CriarProfissionalDto> validator)
     {
@@ -26,14 +27,52 @@ public class ProfissionaisController : ControllerBase
         {
             return BadRequest(validation.Errors);
         }
-        
+
         var profissional = _mapper.Map<Profissional>(profissionalDto);
+        profissional.Id = _proximoId++;
         _profissionais.Add(profissional);
         return Ok(profissional);
     }
 
     [HttpGet]
-    public IActionResult ObterTodos() {
+    public IActionResult ObterTodos()
+    {
         return Ok(_profissionais);
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult Atualizar(int id, [FromBody] CriarProfissionalDto profissionalDto)
+    {
+        var profissional = _profissionais.FirstOrDefault(p => p.Id == id);
+        if (profissional == null)
+        {
+            return NotFound("Profissional não encontrado.");
+        }
+
+        // Atualiza os dados do profissional
+        profissional.Nome = profissionalDto.Nome;
+        profissional.Bio = profissionalDto.Bio;
+        profissional.Telefone = profissionalDto.Telefone;
+        profissional.Email = profissionalDto.Email;
+        profissional.Localizacao = profissionalDto.Localizacao;
+        profissional.Servicos = profissionalDto.Servicos;
+
+        return Ok(profissional);
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(string id)
+    {
+        if (!int.TryParse(id, out var idInt))
+        {
+            return BadRequest("ID inválido.");
+        }
+        var profissional = _profissionais.FirstOrDefault(p => p.Id == idInt);
+        if (profissional == null)
+        {
+            return NotFound("Profissional não encontrado.");
+        }
+        _profissionais.Remove(profissional);
+        return NoContent();
     }
 }
