@@ -26,14 +26,47 @@ public class ProfissionaisController : ControllerBase
         {
             return BadRequest(validation.Errors);
         }
-        
+
         var profissional = _mapper.Map<Profissional>(profissionalDto);
         _profissionais.Add(profissional);
         return Ok(profissional);
     }
 
     [HttpGet]
-    public IActionResult ObterTodos() {
+    public IActionResult ObterTodos()
+    {
         return Ok(_profissionais);
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult Atualizar(string id, [FromBody] CriarProfissionalDto profissionalDto)
+    {
+        var profissional = _profissionais.FirstOrDefault(p => p.Id == id);
+        if (profissional == null)
+        {
+            return NotFound("Profissional não encontrado.");
+        }
+
+        // Atualiza os dados do profissional
+        profissional.Nome = profissionalDto.Nome;
+        profissional.Bio = profissionalDto.Bio;
+        profissional.Telefone = profissionalDto.Telefone;
+        profissional.Email = profissionalDto.Email;
+        profissional.Localizacao = profissionalDto.Localizacao;
+        profissional.Servicos = profissionalDto.Servicos;
+
+        return Ok(profissional);
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(string id)
+    {
+        var profissional = _profissionais.FirstOrDefault(p => p.Id == id);
+        if (profissional == null)
+        {
+            return NotFound("Profissional não encontrado.");
+        }
+        _profissionais.Remove(profissional);
+        return Ok("Profissional deletado com sucesso.");
     }
 }
