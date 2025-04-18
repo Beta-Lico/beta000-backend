@@ -11,7 +11,6 @@ public class ProfissionaisController : ControllerBase
     private readonly IMapper _mapper;
     private readonly IValidator<CriarProfissionalDto> _validator;
     private static readonly List<Profissional> _profissionais = new();
-    private static int _proximoId = 1;
 
     public ProfissionaisController(IMapper mapper, IValidator<CriarProfissionalDto> validator)
     {
@@ -29,7 +28,6 @@ public class ProfissionaisController : ControllerBase
         }
 
         var profissional = _mapper.Map<Profissional>(profissionalDto);
-        profissional.Id = _proximoId++;
         _profissionais.Add(profissional);
         return Ok(profissional);
     }
@@ -41,7 +39,7 @@ public class ProfissionaisController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public IActionResult Atualizar(int id, [FromBody] CriarProfissionalDto profissionalDto)
+    public IActionResult Atualizar(string id, [FromBody] CriarProfissionalDto profissionalDto)
     {
         var profissional = _profissionais.FirstOrDefault(p => p.Id == id);
         if (profissional == null)
@@ -63,16 +61,12 @@ public class ProfissionaisController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult Deletar(string id)
     {
-        if (!int.TryParse(id, out var idInt))
-        {
-            return BadRequest("ID inválido.");
-        }
-        var profissional = _profissionais.FirstOrDefault(p => p.Id == idInt);
+        var profissional = _profissionais.FirstOrDefault(p => p.Id == id);
         if (profissional == null)
         {
             return NotFound("Profissional não encontrado.");
         }
         _profissionais.Remove(profissional);
-        return NoContent();
+        return Ok("Profissional deletado com sucesso.");
     }
 }
